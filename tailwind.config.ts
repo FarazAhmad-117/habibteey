@@ -12,8 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        fredoka: ["Fredoka One", "cursive"],
+        updock: ['Updock', 'cursive'],
+      },
     },
   },
+  darkMode: "class",
   plugins: [],
 };
 export default config;
