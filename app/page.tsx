@@ -1,9 +1,6 @@
 import BackgroundVideo from "@/components/BackgroundVideo";
-import Card from "@/components/Card";
 import Header from "@/components/Header";
-import StarryBackground from "@/components/StarryBackground";
 import React from "react";
-import Moon from "@/components/Moon";
 import NewCard from "@/components/NewCard";
 
 const cardsData = [
@@ -35,7 +32,6 @@ const page = () => {
     <div>
       <BackgroundVideo />
       <Header />
-      {/* <Moon /> */}
       {cardsData.map((card, index) => (
         <div
           key={index}
