@@ -1,6 +1,4 @@
 "use client";
-import HoverCard from "./HoverCard";
-import ThreeDTextAnimation from "./ThreeDTextAnimation";
 import { LampContainer } from "./ui/lamp";
 import { motion } from "framer-motion";
 
