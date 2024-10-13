@@ -36,7 +36,7 @@ const MainPage = () => {
     <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq_PbsFJo6v6rZn9D4MHGTvHhE2879YvY6bxlU74-f1PmahceIDCJ5GeQQ&s=10')] bg-fixed bg-no-repeat bg-cover bg-center md:bg-[url('https://img.pikbest.com/ai/illus_our/20230427/05af4470d3aeadfe584a0f726511513e.jpg')] ">
       {/* <BackgroundVideo /> */}
       <Header name={name} />
-      <div className=" h-screen md:flex gap-3 items-center justify-center">
+      <div className=" h-screen md:flex gap-3 flex-wrap items-center justify-center">
         {cards.map((card: Card) => (
           <div key={card._id} className="min-h-[260px] min-w-[200px]">
             <div className="min-h-[260px] flex items-center justify-center">

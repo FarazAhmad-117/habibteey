@@ -16,7 +16,7 @@ const NewCard = ({ backText, backTitle, frontText }: CardProps) => {
           </div>
         </div>
         <div className="back bg-pink-300 px-2  border-red-600 border-[5px]">
-          <h1 className="text-lg font-bold text-pink-800">{backTitle}</h1>
+          <h1 className="text-3xl font-fredoka text-pink-800">{backTitle}</h1>
           <p className="text-md font-semibold text-red-600">{backText}</p>
         </div>
       </div>

@@ -8,7 +8,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
     try {
         await dbConnect();
-        const cards = await Card.find();
+        const cards = await Card.find({});
         return NextResponse.json({ cards });
     } catch (error) {
         return NextResponse.json({ error, message: "Error getting cards" }, { status: 500 });
