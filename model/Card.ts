@@ -1,3 +1,4 @@
+import { models } from "mongoose";
 import { model, Schema } from "mongoose"
 
 
@@ -17,7 +18,7 @@ const cardSchema = new Schema({
 });
 
 
-const Card = model('Card', cardSchema);
+const Card = models.Card || model('Card', cardSchema);
 
 
 export default Card;

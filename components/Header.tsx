@@ -1,8 +1,7 @@
 "use client";
-import { LampContainer } from "./ui/lamp";
 import { motion } from "framer-motion";
 
-const Header = () => {
+const Header = ({ name }: { name: string }) => {
   return (
     <header className=" w-full py-1 ">
       <motion.h1
@@ -15,7 +14,7 @@ const Header = () => {
         }}
         className="mt-4 bg-gradient-to-br from-slate-200 to-slate-300 py-4 bg-clip-text text-center text-6xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Faraz Ahmad
+        {name}
       </motion.h1>
     </header>
   );
