@@ -86,7 +86,7 @@ const DashboardPage = () => {
     getCards();
   }, [onOpenChange, onEditOpenChange]);
   return (
-    <div className="h-screen w-full text-white bg-[#212121] py-3">
+    <div className="min-h-screen w-full text-white bg-[#212121] py-3">
       <div className="py-2 px-3 mt-5">
         <h2 className="text-3xl text-white font-semibold">
           Welcome to{" "}
@@ -145,7 +145,7 @@ const DashboardPage = () => {
           <Button onClick={onOpen} size="lg" variant="ghost" color="secondary">
             Create New Card
           </Button>
-          <div className="py-3 mt-3 flex items-center justify-center gap-2">
+          <div className="py-3 mt-3 md:flex h-full flex-wrap overflow-y-auto items-center justify-center gap-2">
             {cards.map((card: CardProps) => (
               <CardComp
                 key={card._id}
@@ -361,7 +361,7 @@ function CardComp({
   handleEdit,
 }: CardProps) {
   return (
-    <Card className="w-full max-w-[300px]">
+    <Card className="w-full min-w-[200px] my-2 max-w-[300px] mx-auto">
       <CardHeader className="flex justify-between">
         <h2 className=" flex-1 text-md">{frontText}</h2>
         <div className="gap-1 flex">
