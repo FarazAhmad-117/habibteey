@@ -1,13 +1,13 @@
 import dbConnect from "@/lib/dbConnects";
 import Card from "@/model/Card";
 import mongoose from "mongoose";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
 
 
 
-export async function DELETE({ params }: { params: { id: string } }) {
+export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
     try {
         await dbConnect();
         const { id } = params;
