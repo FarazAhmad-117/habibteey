@@ -255,7 +255,7 @@ function CreateCardModal({ isOpen, onOpenChange }: CardModalProps) {
 interface EditCardModalProps {
   isOpen: boolean;
   onOpenChange: () => void;
-  editData: CardProps;
+  editData: CardProps | null;
   setEditData: (data: CardProps | null) => void;
 }
 
@@ -277,7 +277,7 @@ function EditCardModal({
     }
     setIsLoading(true);
     try {
-      const resp = await axios.put(`/api/card/update/${editData._id}`, {
+      const resp = await axios.put(`/api/card/update/${editData?._id}`, {
         frontText,
         backText,
         backTitle,
