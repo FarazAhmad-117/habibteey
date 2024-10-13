@@ -146,7 +146,7 @@ const DashboardPage = () => {
             Create New Card
           </Button>
           <div className="py-3 mt-3 flex items-center justify-center gap-2">
-            {cards.map((card: CardProps, idx) => (
+            {cards.map((card: CardProps) => (
               <CardComp
                 key={card._id}
                 frontText={card.frontText}

@@ -4,28 +4,7 @@ import React, { useEffect, useState } from "react";
 import NewCard from "@/components/NewCard";
 import axios from "axios";
 
-const cardsData = [
-  {
-    backTitle: "The heading you wanted",
-    backText:
-      "The text you wanted Lorem ipsum dolor sit amet consectet adipisicing elit. Accusamus asperiores assumenda autem, itaque optio quas quod, repellat id quidem suscipit quaerat commodi voluptate blanditiis eos. Totam tempora nemo pariatur! Quod!",
-    frontText: "Card 1",
-  },
-  {
-    backTitle: "The heading you wanted",
-    backText:
-      "The text you wanted Lorem ipsum dolor sit amet consectet adipisicing elit. Accusamus asperiores assumenda autem, itaque optio quas quod, repellat id quidem suscipit quaerat commodi voluptate blanditiis eos. Totam tempora nemo pariatur! Quod!",
-    frontText: "Card 2",
-  },
-  {
-    backTitle: "The heading you wanted",
-    backText:
-      "The text you wanted Lorem ipsum dolor sit amet consectet adipisicing elit. Accusamus asperiores assumenda autem, itaque optio quas quod, repellat id quidem suscipit quaerat commodi voluptate blanditiis eos. Totam tempora nemo pariatur! Quod!",
-    frontText: "Card 3",
-  },
-];
-
-const page = () => {
+const MainPage = () => {
   const [name, setName] = useState("");
   const [cards, setCards] = useState([]);
   const getName = async () => {
@@ -74,7 +53,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default MainPage;
 
 interface Card {
   _id: string;

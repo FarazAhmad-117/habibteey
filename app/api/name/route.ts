@@ -28,7 +28,7 @@ export async function PUT(req: NextRequest) {
 }
 
 
-export async function GET(req: NextRequest) {
+export async function GET() {
     try {
         await dbConnect();
         const nameCard = await Name.findOne();

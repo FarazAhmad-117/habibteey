@@ -1,5 +1,4 @@
 import React from "react";
-import { CardSpotlight } from "./ui/card-spotlight";
 import { CanvasRevealEffect } from "./ui/canvas-reveal-effect";
 
 interface CardProps {
