@@ -8,43 +8,40 @@ const cardsData = [
     backTitle: "The heading you wanted",
     backText:
       "The text you wanted Lorem ipsum dolor sit amet consectet adipisicing elit. Accusamus asperiores assumenda autem, itaque optio quas quod, repellat id quidem suscipit quaerat commodi voluptate blanditiis eos. Totam tempora nemo pariatur! Quod!",
-    imageUrl:
-      "https://cdn.pixabay.com/photo/2020/05/08/23/26/love-5147677_960_720.jpg",
+    frontText: "Card 1",
   },
   {
     backTitle: "The heading you wanted",
     backText:
       "The text you wanted Lorem ipsum dolor sit amet consectet adipisicing elit. Accusamus asperiores assumenda autem, itaque optio quas quod, repellat id quidem suscipit quaerat commodi voluptate blanditiis eos. Totam tempora nemo pariatur! Quod!",
-    imageUrl:
-      "https://cdn.pixabay.com/photo/2020/05/08/23/26/love-5147677_960_720.jpg",
+    frontText: "Card 2",
   },
   {
     backTitle: "The heading you wanted",
     backText:
       "The text you wanted Lorem ipsum dolor sit amet consectet adipisicing elit. Accusamus asperiores assumenda autem, itaque optio quas quod, repellat id quidem suscipit quaerat commodi voluptate blanditiis eos. Totam tempora nemo pariatur! Quod!",
-    imageUrl:
-      "https://cdn.pixabay.com/photo/2020/05/08/23/26/love-5147677_960_720.jpg",
+    frontText: "Card 3",
   },
 ];
 
 const page = () => {
   return (
-    <div>
-      <BackgroundVideo />
+    <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq_PbsFJo6v6rZn9D4MHGTvHhE2879YvY6bxlU74-f1PmahceIDCJ5GeQQ&s=10')] bg-fixed bg-no-repeat bg-cover bg-center md:bg-[url('https://img.pikbest.com/ai/illus_our/20230427/05af4470d3aeadfe584a0f726511513e.jpg')] ">
+      {/* <BackgroundVideo /> */}
       <Header />
-      {cardsData.map((card, index) => (
-        <div
-          key={index}
-          className="min-h-screen flex items-center justify-center"
-        >
-          {/* <h2 className="text-white">Card1 Secion</h2> */}
-          <NewCard
-            backText={card.backText}
-            backTitle={card.backTitle}
-            imageUrl={card.imageUrl}
-          />
-        </div>
-      ))}
+      <div className=" h-screen md:flex gap-3 items-center justify-center">
+        {cardsData.map((card, index) => (
+          <div key={index} className="min-h-[260px] min-w-[200px]">
+            <div className="min-h-[260px] flex items-center justify-center">
+              <NewCard
+                backText={card.backText}
+                backTitle={card.backTitle}
+                frontText={card.frontText}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
